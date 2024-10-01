@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+        color="#111">
+
+    <title>CodePen - Animated text fill with svg text practice</title>
+
+    <link rel="canonical" href="https://codepen.io/cesar2535/pen/ByYXpN">
+
+    <style>
+        /* Main styles */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+        .text {
+            fill: none;
+            stroke-width: 3;
+            stroke-linejoin: round;
+            stroke-dasharray: 70 330;
+            stroke-dashoffset: 0;
+            -webkit-animation: stroke 6s infinite linear;
+            animation: stroke 6s infinite linear;
+        }
+
+        .text:nth-child(5n+1) {
+            stroke: #F2385A;
+            -webkit-animation-delay: -1.2s;
+            animation-delay: -1.2s;
+        }
+
+        .text:nth-child(5n+2) {
+            stroke: #F5A503;
+            -webkit-animation-delay: -2.4s;
+            animation-delay: -2.4s;
+        }
+
+        .text:nth-child(5n+3) {
+            stroke: #E9F1DF;
+            -webkit-animation-delay: -3.6s;
+            animation-delay: -3.6s;
+        }
+
+        .text:nth-child(5n+4) {
+            stroke: #56D9CD;
+            -webkit-animation-delay: -4.8s;
+            animation-delay: -4.8s;
+        }
+
+        .text:nth-child(5n+5) {
+            stroke: #3AA1BF;
+            -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+        }
+
+        @-webkit-keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: -400;
+            }
+        }
+
+        /* Other styles */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: #111;
+            background-size: 0.2em 100%;
+            font: 5em/1 Open Sans, Impact;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+</head>
+
+<body translate="no" data-new-gr-c-s-check-loaded="14.1198.0" data-gr-ext-installed="">
+    <svg viewBox="0 0 600 300">
+        <!-- Symbol-->
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="50%" dy=".35em">Interstellar</text>
+        </symbol>
+        <!-- Duplicate symbols-->
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+    </svg>
+</body>
+    
+</body>
+</html>
